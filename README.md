@@ -1,5 +1,7 @@
 # Close Enough
 
+[![Build Status](https://secure.travis-ci.org/ruby-jokes/close_enough.png?branch=master)](http://travis-ci.org/ruby-jokes/close_enough)
+
 ## SYNOPSIS
 
 Sometimes when deadlines are tight, speed becomes more important than accuracy. How many times have we had to face failing tests because fo one little typo in a method signature?
