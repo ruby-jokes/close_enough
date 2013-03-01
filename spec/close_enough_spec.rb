@@ -17,7 +17,20 @@ module CloseEnoughSpec
       @obj.frozne.should == true
     end
 
+    it "should raise NoMethodError if the edit distance is >= 3" do
+      expect {@obj.sjdhs}.to raise_error(NoMethodError)
+    end
+  end
 
+  describe "it should call the closest method on String" do
+    
+    it "should return the length when lentgh is called" do
+      "wibble".lentgh.should == 6
+    end
+
+    it "should reverse a string" do
+      "parsnip".reserve.should == "pinsrap"
+    end
   end
 
 
