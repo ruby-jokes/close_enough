@@ -21,7 +21,7 @@ and
 
 With bundler:
 
-`gem 'close_enough', :require => 'close_enough'
+`gem 'close_enough', :require => 'close_enough'`
 
 Then:
 
