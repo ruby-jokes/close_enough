@@ -1,6 +1,6 @@
 # Close Enough
 
-[![Build Status](https://secure.travis-ci.org/ruby-jokes/close_enough.png?branch=master)](http://travis-ci.org/ruby-jokes/close_enough)
+[![Build Status](https://secure.travis-ci.org/ruby-jokes/close_enough.png)](http://travis-ci.org/ruby-jokes/close_enough)
 [![Code Climate](https://codeclimate.com/github/ruby-jokes/close_enough.png)](https://codeclimate.com/github/ruby-jokes/close_enough)
 
 ## SYNOPSIS
@@ -22,6 +22,24 @@ and
 With bundler:
 
 `gem 'close_enough', :require => 'close_enough'
+
+Then:
+
+```ruby
+
+o = Object.new
+o.closs
+
+=> Object
+
+"foo".lentgh
+
+=> 3
+
+[1, 2, 3].redcue(:+)
+=> 6
+```
+![center](http://i0.kym-cdn.com/photos/images/original/000/181/367/closeenough.png?1317606898)
 
 ## FAQ
 
