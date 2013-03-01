@@ -21,7 +21,7 @@ and
 
 With bundler:
 
-`gem 'close_enough', :require => 'close_enough'
+`gem 'close_enough', :require => 'close_enough'`
 
 Then:
 
@@ -57,7 +57,9 @@ A. No, go right ahead... just be advised we take no responsibility for the conse
 
 ## How do I get it?
 
-TODO: Upload to Rubygems
+From Rubygems, of course!
+
+https://rubygems.org/gems/close_enough
 
 ## AUTHORS
 
