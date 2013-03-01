@@ -2,6 +2,7 @@
 
 [![Build Status](https://secure.travis-ci.org/ruby-jokes/close_enough.png)](http://travis-ci.org/ruby-jokes/close_enough)
 [![Code Climate](https://codeclimate.com/github/ruby-jokes/close_enough.png)](https://codeclimate.com/github/ruby-jokes/close_enough)
+[![Dependency Status](https://gemnasium.com/ruby-jokes/close_enough.png)](https://gemnasium.com/ruby-jokes/close_enough)
 
 ## SYNOPSIS
 
