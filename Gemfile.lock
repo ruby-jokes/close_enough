@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    close_enough (0.0.2)
+    close_enough (0.1.1)
       damerau-levenshtein (~> 0.5.4)
 
 GEM

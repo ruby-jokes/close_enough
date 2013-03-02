@@ -2,7 +2,7 @@ require 'rake'
 
 Gem::Specification.new do |s|
   s.name = 'close_enough'
-  s.version = '0.1.0'
+  s.version = '0.1.1'
   s.platform = Gem::Platform::RUBY
   s.summary = 'Mistyping methods? Not a problem.'
   s.description = 'close_enough patches method_missing to calculate the Damerau-Levenshtein distance between what you typed, and the existing methods on the current receiver. So typos are no longer a big deal.'
