@@ -33,6 +33,11 @@ module CloseEnoughSpec
     end
   end
 
+  describe "it should call the closest method, out of all methods < 3 away" do
 
+    it "should find to_sym when to_sim is called (instead of to_str)" do
+      'contrived'.to_sim.should == :contrived
+    end
+  end
 
 end
