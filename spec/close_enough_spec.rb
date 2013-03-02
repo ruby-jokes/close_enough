@@ -40,4 +40,12 @@ module CloseEnoughSpec
     end
   end
 
+  describe "the called method should be able to take a block" do
+    it "should yield the results of applying the block" do
+      [1,2,3,4].correct do |a|
+        a += 1
+      end.should == [2,3,4,5]
+    end
+  end
+
 end
