@@ -5,14 +5,11 @@ class Object
 
   def method_missing(name, *args, &block)
     dl = DamerauLevenshtein
-    ms = methods.map(&:to_s).freeze
+    ms = methods.map(&:to_s)
 
-    meth = ms.inject([]) do |matches, a|
-      distance = dl.distance(name.to_s, a)
-      matches << [distance, a] if distance < 3
-      matches
-    end.sort_by(&:first).first
+    meth = ms.min_by {|possible| dl.distance(name.to_s, possible)}
+    meth = false unless dl.distance(name.to_s, meth) < 3
 
-    meth ? send(meth[1], *args, &block) : super
+    meth ? send(meth, *args, &block) : super
   end
 end
