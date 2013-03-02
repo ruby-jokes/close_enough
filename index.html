@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Close Enough by ruby-jokes</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Close Enough</h1>
+        <p class="header">Spelling is hrad. close_enough lets yuo think about code instaed.</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/ruby-jokes/close_enough/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/ruby-jokes/close_enough/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/ruby-jokes/close_enough">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/ruby-jokes">ruby-jokes</a></p>
+
+
+      </header>
+      <section>
+        <h1>Close Enough</h1>
+
+<p><a href="http://travis-ci.org/ruby-jokes/close_enough"><img src="https://secure.travis-ci.org/ruby-jokes/close_enough.png" alt="Build Status"></a>
+<a href="https://codeclimate.com/github/ruby-jokes/close_enough"><img src="https://codeclimate.com/github/ruby-jokes/close_enough.png" alt="Code Climate"></a>
+<a href="https://gemnasium.com/ruby-jokes/close_enough"><img src="https://gemnasium.com/ruby-jokes/close_enough.png" alt="Dependency Status"></a></p>
+
+<h2>SYNOPSIS</h2>
+
+<p>Sometimes when deadlines are tight, speed becomes more important than accuracy. How many times have we had to face failing tests because fo one little typo in a method signature?</p>
+
+<p>Close Enough fixes this. By calculating the Damerau-Levenshtein distance between existing methods and what you actually typed, we infer the intended method from method calls with small typographical errors (an edit distance of &lt; 3).</p>
+
+<h2>USAGE</h2>
+
+<p>It's easy.</p>
+
+<p><code>gem install close_enough</code></p>
+
+<p>and</p>
+
+<p><code>require close_enough</code> in your project.</p>
+
+<p>With bundler:</p>
+
+<p><code>gem 'close_enough', :require =&gt; 'close_enough'</code></p>
+
+<p>Then:</p>
+
+<div class="highlight"><pre>
+<span class="n">o</span> <span class="o">=</span> <span class="no">Object</span><span class="o">.</span><span class="n">new</span>
+<span class="n">o</span><span class="o">.</span><span class="n">closs</span>
+
+<span class="o">=&gt;</span> <span class="no">Object</span>
+
+<span class="s2">"foo"</span><span class="o">.</span><span class="n">lentgh</span>
+
+<span class="o">=&gt;</span> <span class="mi">3</span>
+
+<span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="o">].</span><span class="n">redcue</span><span class="p">(</span><span class="ss">:+</span><span class="p">)</span>
+<span class="o">=&gt;</span> <span class="mi">6</span>
+</pre></div>
+
+<p><img src="http://i0.kym-cdn.com/photos/images/original/000/181/367/closeenough.png?1317606898" alt="center"></p>
+
+<h2>FAQ</h2>
+
+<p>Q. I make typos all the time! Will this save my job?</p>
+
+<p>A. Probably not, no.</p>
+
+<p>Q. You're joking, right?</p>
+
+<p>A. ...</p>
+
+<p>Q. So I shouldn't use this in production code?</p>
+
+<p>A. No, go right ahead... just be advised we take no responsibility for the consequences.</p>
+
+<h2>How do I get it?</h2>
+
+<p>From Rubygems, of course!</p>
+
+<p><a href="https://rubygems.org/gems/close_enough">https://rubygems.org/gems/close_enough</a></p>
+
+<h2>AUTHORS</h2>
+
+<p><a href="https://github.com/mgates">Micah Gates</a></p>
+
+<p><a href="https://github.com/canweriotnow">Jason Lewis</a></p>
+
+<h2>Contributors</h2>
+
+<p><a href="https://github.com/jhollinger">Jordan Hollinger</a></p>
+
+<h2>CONTRIBUTING</h2>
+
+<p>Really? You have that much time on your hands? Awesome!</p>
+
+<p>Two guidelines, though:</p>
+
+<ul>
+<li>Please include tests for all pull requests. Bonus points for feature branches!</li>
+<li>No monkey-patching <code>BasicObject</code> without grave justification. We're not that crazy.</li>
+</ul><h2>Praise for close_enough</h2>
+
+<blockquote>
+<p>THIS IS WRONG!!! <a href="http://t.co/nMwTjBCnRO" title="http://decomplecting.org/blog/2013/03/01/code-typos-got-you-down-stop-worrying-with-close-enough/">decomplecting.org/blog/2013/03/0…</a></p>— Michael Feathers (@mfeathers) <a href="https://twitter.com/mfeathers/status/307859643705745409">March 2, 2013</a>
+</blockquote>
+
+<hr><blockquote>
+<p>This is just awesome -should really help create maintainable Ruby code <a href="http://t.co/Nro3ZtUesg" title="http://decomplecting.org/blog/2013/03/01/code-typos-got-you-down-stop-worrying-with-close-enough/">decomplecting.org/blog/2013/03/0…</a></p>— Stefan Tilkov (<a href="https://github.com/stilkov" class="user-mention">@stilkov</a>) <a href="https://twitter.com/stilkov/status/307862660790235137">March 2, 2013</a>
+</blockquote>
+
+<hr><blockquote>
+<p>Wonderfully dangerous stuff, <a href="http://t.co/lsSmuV7z7Y" title="http://decomplecting.org/blog/2013/03/01/code-typos-got-you-down-stop-worrying-with-close-enough/">decomplecting.org/blog/2013/03/0…</a></p>— James Hughes (<a href="https://github.com/kouphax" class="user-mention">@kouphax</a>) <a href="https://twitter.com/kouphax/status/307891506134540288">March 2, 2013</a>
+</blockquote>
+
+<hr><h2>LICENSE</h2>
+
+<p>Copyright (C) 2013 Micah Gates and Jason Lewis</p>
+
+<p>This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.</p>
+
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.</p>
+
+<p>You should have received a copy of the GNU General Public License
+along with this program.  If not, see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.</p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
