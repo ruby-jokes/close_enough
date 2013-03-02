@@ -2,7 +2,17 @@ require "spec_helper.rb"
 
 module CloseEnoughSpec
 
-  describe "it should call the closest method on Object" do
+  describe "nearest_method should find the nearest method to the typo" do
+    before(:each) do
+      @obj = Object.new
+    end
+
+    it "should return 'freeze' for 'frese'" do
+      @obj.send(:nearest_method, 'frese').should == "freeze"
+    end
+  end
+
+  describe "method_missing should call the closest method on Object" do
     before(:each) do
       @obj = Object.new
     end
@@ -47,5 +57,13 @@ module CloseEnoughSpec
       end.should == [2,3,4,5]
     end
   end
+
+  #describe "warnings should be issued when the correct method is guessed" do
+  #  it "should warn when guessing 'reverse' for 'reserve'" do
+  #    str = "avocado"
+  #    str.should_receive(:warn).with("[CloseEnough] reserve not found, using reverse instead")
+  #    str.reserve
+  #  end
+  #end
 
 end

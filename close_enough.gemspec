@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.authors = ["Micah Gates", "Jason Lewis"]
   s.email = ["github@mgates.com", "jason@decomplecting.org"]
   s.files = FileList['lib/*.rb', 'spec/*.rb'].to_a
-  s.homepage = "https://github.com/ruby-jokes/close_enough"
+  s.homepage = "https://ruby-jokes.github.com/close_enough"
   s.add_runtime_dependency 'damerau-levenshtein', '~> 0.5.4'
   s.add_development_dependency 'rspec', '~> 2.13.0'
   s.add_development_dependency 'rake', '~> 10.0.3'
