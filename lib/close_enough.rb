@@ -3,7 +3,7 @@ require 'damerau-levenshtein'
 class Object
   private
 
-  def method_missing(name, *args)
+  def method_missing(name, *args, &block)
     dl = DamerauLevenshtein
     ms = methods.map(&:to_s).freeze
 
@@ -13,6 +13,6 @@ class Object
       matches
     end.sort_by(&:first).first
 
-    meth ? send(meth[1], *args) : super
+    meth ? send(meth[1], *args, &block) : super
   end
 end
