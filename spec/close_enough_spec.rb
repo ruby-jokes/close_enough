@@ -58,12 +58,12 @@ module CloseEnoughSpec
     end
   end
 
-  #describe "warnings should be issued when the correct method is guessed" do
-  #  it "should warn when guessing 'reverse' for 'reserve'" do
-  #    str = "avocado"
-  #    str.should_receive(:warn).with("[CloseEnough] reserve not found, using reverse instead")
-  #    str.reserve
-  #  end
-  #end
+  describe "warnings should be issued when the correct method is guessed" do
+    it "should warn when guessing 'reverse' for 'reserve'" do
+      str = "avocado"
+      str.should_receive(:warn).with("[CloseEnough] reserve not found, using reverse instead")
+      str.reserve
+    end
+  end
 
 end
