@@ -68,6 +68,10 @@ https://rubygems.org/gems/close_enough
 
 [Jason Lewis](https://github.com/canweriotnow)
 
+## Contributors
+
+[Jordan Hollinger](https://github.com/jhollinger)
+
 ## CONTRIBUTING
 
 Really? You have that much time on your hands? Awesome!
