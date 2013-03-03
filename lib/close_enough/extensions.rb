@@ -1,9 +1,9 @@
 module CloseEnough
   module Extensions
     module ClassMethods
-      
+
     end
-    
+
     module InstanceMethods
       private
 
@@ -25,7 +25,7 @@ module CloseEnough
         meth ? send(meth, *args, &block) : super
       end
     end
-    
+
     def self.included(receiver)
       receiver.extend         ClassMethods
       receiver.send :include, InstanceMethods
