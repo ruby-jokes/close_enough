@@ -10,6 +10,7 @@ module CloseEnoughSpec
     it "should return 'freeze' for 'frese'" do
       @obj.send(:nearest_method, 'frese').should == "freeze"
     end
+
   end
 
   describe "method_missing should call the closest method on Object" do
@@ -43,10 +44,10 @@ module CloseEnoughSpec
     end
   end
 
-  describe "it should call the closest method, out of all methods < 3 away" do
+  describe "it should exxclude to_* methods" do
 
-    it "should find to_sym when to_sim is called (instead of to_str)" do
-      'contrived'.to_sim.should == :contrived
+    it "should raise NoMethodError when to_sim is called" do
+      expect{'contrived'.to_sim}.to raise_error(NoMethodError)
     end
   end
 

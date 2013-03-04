@@ -9,7 +9,7 @@ module CloseEnough
 
       def nearest_method(name)
         dl = DamerauLevenshtein
-        ms = methods.map(&:to_s)
+        ms = methods.map(&:to_s).reject {|m| m =~ /to_.+/}
         meth = ms.min_by {|possible| dl.distance(name.to_s, possible)}
         unless dl.distance(name.to_s, meth) < 3
           return false
