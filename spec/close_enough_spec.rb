@@ -2,7 +2,18 @@ require "spec_helper.rb"
 
 module CloseEnoughSpec
 
-  describe "it should call the closest method on Object" do
+  describe "nearest_method should find the nearest method to the typo" do
+    before(:each) do
+      @obj = Object.new
+    end
+
+    it "should return 'freeze' for 'frese'" do
+      @obj.send(:nearest_method, 'frese').should == "freeze"
+    end
+
+  end
+
+  describe "method_missing should call the closest method on Object" do
     before(:each) do
       @obj = Object.new
     end
@@ -33,6 +44,27 @@ module CloseEnoughSpec
     end
   end
 
+  describe "it should exxclude to_* methods" do
 
+    it "should raise NoMethodError when to_sim is called" do
+      expect{'contrived'.to_sim}.to raise_error(NoMethodError)
+    end
+  end
+
+  describe "the called method should be able to take a block" do
+    it "should yield the results of applying the block" do
+      [1,2,3,4].correct do |a|
+        a += 1
+      end.should == [2,3,4,5]
+    end
+  end
+
+  describe "warnings should be issued when the correct method is guessed" do
+    it "should warn when guessing 'reverse' for 'reserve'" do
+      str = "avocado"
+      str.should_receive(:warn).with("[CloseEnough] reserve not found, using reverse instead")
+      str.reserve
+    end
+  end
 
 end
