@@ -1,5 +1,5 @@
 require 'damerau-levenshtein'
-require 'close_enough/extensions'
+require_relative 'close_enough/extensions'
 
 module CloseEnough
 
