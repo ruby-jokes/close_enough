@@ -4,6 +4,7 @@
 [![Code Climate](https://codeclimate.com/github/ruby-jokes/close_enough.png)](https://codeclimate.com/github/ruby-jokes/close_enough)
 [![Dependency Status](https://gemnasium.com/ruby-jokes/close_enough.png)](https://gemnasium.com/ruby-jokes/close_enough)
 [![Coverage Status](https://coveralls.io/repos/ruby-jokes/close_enough/badge.png?branch=master)](https://coveralls.io/r/ruby-jokes/close_enough)
+[![Gem Version](https://badge.fury.io/rb/close_enough.png)](http://badge.fury.io/rb/close_enough)
 
 ## SYNOPSIS
 
